@@ -41,7 +41,7 @@ Q.push = function push(payload, cb) {
     if (err) {
       if (cb) cb(err);
       else q.emit('error', err);
-    } else if (cb) cb();
+    } else if (cb) cb(null, id);
   };
 }
 

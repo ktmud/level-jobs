@@ -85,7 +85,7 @@ var queue = Jobs(db, worker, options);
 ```javascript
 var payload = {what: 'ever'};
 
-var jobId = queue.push(payload, function(err) {
+var jobId = queue.push(payload, function(err, jobId) {
   if (err) console.error('Error pushing work into the queue', err.stack);
 });
 ```
